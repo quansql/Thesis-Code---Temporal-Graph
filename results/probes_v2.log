@@ -1,0 +1,9 @@
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+P1 schedule-aware temporal (dt+cadence), gated: hit@3 0.736 hit@5 0.680 hit@10 0.757 ndcg@5 0.821 (77 ep, 76s)
+P2 low-data n=85 gated: hit@3 0.732 hit@5 0.684 hit@10 0.743 ndcg@5 0.817 (155 ep, 48s)
+P2 low-data n=85 no gate: hit@3 0.746 hit@5 0.708 hit@10 0.783 ndcg@5 0.838 (173 ep, 53s)
+P3 u_i=on gate=on: hit@3 0.739 hit@5 0.687 hit@10 0.760 ndcg@5 0.826 (78 ep, 75s)
+P3 u_i=on gate=off: hit@3 0.749 hit@5 0.713 hit@10 0.790 ndcg@5 0.845 (78 ep, 73s)
+P3 u_i=off gate=on: hit@3 0.738 hit@5 0.688 hit@10 0.759 ndcg@5 0.825 (78 ep, 73s)
+P3 u_i=off gate=off: hit@3 0.751 hit@5 0.715 hit@10 0.790 ndcg@5 0.845 (78 ep, 75s)

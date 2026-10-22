@@ -1,0 +1,4 @@
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+[gnn] GCN (sym-norm): hit@3 0.727 hit@5 0.671 hit@10 0.734 ndcg@5 0.791 rho_imp 0.574
+[gnn] GraphSAGE-mean: hit@3 0.753 hit@5 0.718 hit@10 0.786 ndcg@5 0.846 rho_imp 0.647

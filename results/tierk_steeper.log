@@ -1,0 +1,10 @@
+TIER_MODE steeper {'lead_time_days': {1: 9.292, 2: 35.468, 3: 60.701}, 'buffer_days': {1: 16.92, 2: 9.007, 3: 5.905}, 'single_source': {1: 0.121, 2: 0.356, 3: 0.552}}
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+/tmp/claude-0/-home-claude/41d12f95-7e0a-5425-9c3d-a2c8de4a66f8/scratchpad/exp/common.py:120: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean(v)) for k, v in pe.items()}
+[steeper] Shortest-path heuristic: hit@3 0.563 hit@5 0.398 hit@10 0.526 ndcg@5 0.565 rho_imp nan
+[steeper] Dependency-share cascade: hit@3 0.813 hit@5 0.776 hit@10 0.821 ndcg@5 0.891 rho_imp 0.675
+[steeper] Base (no w_i): hit@3 0.786 hit@5 0.741 hit@10 0.806 ndcg@5 0.868 rho_imp 0.661
+[steeper] Full (no w_i): hit@3 0.759 hit@5 0.714 hit@10 0.773 ndcg@5 0.853 rho_imp 0.625
+[steeper] Base (with w_i): hit@3 0.713 hit@5 0.618 hit@10 0.740 ndcg@5 0.775 rho_imp 0.491

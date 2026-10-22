@@ -1,0 +1,5 @@
+Model,RMSE,Spearman rho,Hit@3,Hit@5,Hit@10
+Proposed (TGAT + inventory gate),0.0018,0.998,0.625,0.52,0.71
+Baseline 1: Static GNN,0.002,0.998,0.625,0.52,0.72
+Baseline 2: No inventory gate,0.0014,0.998,0.688,0.54,0.77
+Baseline 3: Shortest-path heuristic,0.01,0.997,0.521,0.26,0.53

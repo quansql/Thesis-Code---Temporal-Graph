@@ -1,0 +1,66 @@
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+
+--- Grid search (beta, gamma) on validation ---
+beta=1.0 gamma=0.3: val_mse=0.00008 rho=0.999 hit@5=0.700 (60 ep, 58s)
+beta=1.0 gamma=0.6: val_mse=0.00004 rho=0.999 hit@5=0.700 (60 ep, 116s)
+beta=1.0 gamma=0.8: val_mse=0.00003 rho=0.999 hit@5=0.675 (60 ep, 175s)
+beta=2.0 gamma=0.3: val_mse=0.00010 rho=0.999 hit@5=0.725 (60 ep, 237s)
+beta=2.0 gamma=0.6: val_mse=0.00005 rho=0.999 hit@5=0.700 (60 ep, 296s)
+beta=2.0 gamma=0.8: val_mse=0.00004 rho=0.999 hit@5=0.700 (60 ep, 354s)
+beta=3.0 gamma=0.3: val_mse=0.00009 rho=0.999 hit@5=0.700 (60 ep, 411s)
+beta=3.0 gamma=0.6: val_mse=0.00006 rho=0.999 hit@5=0.675 (60 ep, 468s)
+beta=3.0 gamma=0.8: val_mse=0.00005 rho=0.999 hit@5=0.675 (60 ep, 525s)
+Selected: beta=1.0, gamma=0.8
+
+--- Final training ---
+Proposed trained (78 epochs)
+Baseline 1 trained (75 epochs)
+Baseline 2 trained (83 epochs)
+
+==============================================================================
+TEST-SET RESULTS
+==============================================================================
+                              Model   RMSE  Spearman rho  Hit@3  Hit@5  Hit@10
+   Proposed (TGAT + inventory gate) 0.0018         0.998  0.625   0.52    0.71
+             Baseline 1: Static GNN 0.0020         0.998  0.625   0.52    0.72
+      Baseline 2: No inventory gate 0.0014         0.998  0.688   0.54    0.77
+Baseline 3: Shortest-path heuristic 0.0100         0.997  0.521   0.26    0.53
+
+rho computed over 47 test events with non-constant ground truth
+hit@5 over 10 events with >=5 impacted Tier-1 suppliers
+
+--- Calibration (Eq. 4.13), fitted on validation: log y = 0.697 log E + -0.462 (n=214) ---
+Old rule (E_hat >= 0.5): 118 flags; median true shortfall of flagged = 0.0016
+Test events by source tier: {1: 8, 2: 23, 3: 46}
+ theta  flags  true_exceed  precision  recall  events_flagged_T1  events_flagged_T2  events_flagged_T3
+ 0.005     46           58      0.935   0.741                  8                 11                  0
+ 0.010     35           34      0.886   0.912                  8                  7                  0
+ 0.020     13           18      0.923   0.667                  8                  3                  0
+ 0.050      8            8      1.000   1.000                  8                  0                  0
+ 0.100      7            7      1.000   1.000                  7                  0                  0
+
+--- Highest-severity test event E-0240 (severity 0.799, source tier 2) ---
+Flags at theta=0.05: 0. Watchlist (top-5 by y_hat):
+supplier  y_hat  y_true
+  S-0091 0.0202  0.0456
+  S-0040 0.0182  0.0179
+  S-0025 0.0125  0.0108
+  S-0003 0.0000  0.0000
+  S-0005 0.0000  0.0000
+
+--- Mitigation demo: highest-severity FLAGGING test event E-0349 (severity 0.773, source tier 1), 1 flagged ---
+ event flagged  y_hat  y_true alternative   sim  alt_y_hat  score  realloc_share_%
+E-0349  S-0067 0.2949  0.5032      S-0045 0.942        0.0  0.971             33.7
+E-0349  S-0067 0.2949  0.5032      S-0120 0.927        0.0  0.963             33.5
+E-0349  S-0067 0.2949  0.5032      S-0106 0.891        0.0  0.946             32.8
+
+Done in 742s total
+ tier  events   rmse   rho  hit@5  n_hit@5
+    1       8 0.0035 1.000    NaN        0
+    2      23 0.0019 1.000  0.600        1
+    3      46 0.0012 0.997  0.511        9
+Old rule: Tier-3-source events with >=1 flag: 63.0% of 46
+Linear training head on test, Tier-2 source: min 0.0012, median 0.0012, unique 36
+Linear training head on test, Tier-3 source: min 0.0012, median 0.0012, unique 49
+Max calibrated y_hat for Tier-3-source test events: 0.00349

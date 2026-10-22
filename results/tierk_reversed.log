@@ -1,0 +1,10 @@
+TIER_MODE reversed {'lead_time_days': {1: 50.859, 2: 35.468, 3: 18.06}, 'buffer_days': {1: 7.178, 2: 9.007, 3: 13.779}, 'single_source': {1: 0.431, 2: 0.356, 3: 0.182}}
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+/tmp/claude-0/-home-claude/41d12f95-7e0a-5425-9c3d-a2c8de4a66f8/scratchpad/exp/common.py:120: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean(v)) for k, v in pe.items()}
+[reversed] Shortest-path heuristic: hit@3 0.571 hit@5 0.426 hit@10 0.547 ndcg@5 0.579 rho_imp nan
+[reversed] Dependency-share cascade: hit@3 0.755 hit@5 0.703 hit@10 0.767 ndcg@5 0.861 rho_imp 0.595
+[reversed] Base (no w_i): hit@3 0.738 hit@5 0.682 hit@10 0.745 ndcg@5 0.834 rho_imp 0.607
+[reversed] Full (no w_i): hit@3 0.734 hit@5 0.677 hit@10 0.751 ndcg@5 0.834 rho_imp 0.602
+[reversed] Base (with w_i): hit@3 0.707 hit@5 0.607 hit@10 0.703 ndcg@5 0.770 rho_imp 0.436

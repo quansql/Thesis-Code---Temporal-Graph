@@ -1,0 +1,7 @@
+Labels: (493, 116), mean nonzero per event: 3.4, events with >=5 impacted T1: 58
+Split: train 343 / val 73 / test 77
+/tmp/claude-0/-home-claude/41d12f95-7e0a-5425-9c3d-a2c8de4a66f8/scratchpad/exp/common.py:99: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean(v)) for k, v in pe.items()}
+[th14] Shortest-path heuristic: hit@3 0.527 hit@5 0.383 hit@10 0.544 ndcg@5 0.517 rho_imp nan
+[th14] Base (attention only): hit@3 0.675 hit@5 0.614 hit@10 0.707 ndcg@5 0.737 rho_imp 0.526
+[th14] Full (temporal + gate): hit@3 0.651 hit@5 0.589 hit@10 0.711 ndcg@5 0.726 rho_imp 0.502

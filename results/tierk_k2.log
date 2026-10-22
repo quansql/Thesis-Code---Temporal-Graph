@@ -1,0 +1,4 @@
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+[k2] Base K=2: hit@3 0.753 hit@5 0.718 hit@10 0.786 ndcg@5 0.846 rho_imp 0.647
+[k2] Full K=2: hit@3 0.732 hit@5 0.683 hit@10 0.755 ndcg@5 0.823 rho_imp 0.615
