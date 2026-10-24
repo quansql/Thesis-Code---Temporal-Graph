@@ -1,0 +1,78 @@
+{
+ "smeared_flag_sens": [
+  {
+   "theta": 0.005,
+   "flags": 46,
+   "prec": 0.9347826086956522,
+   "rec": 0.7413793103448276
+  },
+  {
+   "theta": 0.01,
+   "flags": 41,
+   "prec": 0.7804878048780488,
+   "rec": 0.9411764705882353
+  },
+  {
+   "theta": 0.02,
+   "flags": 17,
+   "prec": 0.7647058823529411,
+   "rec": 0.7222222222222222
+  },
+  {
+   "theta": 0.05,
+   "flags": 8,
+   "prec": 1.0,
+   "rec": 1.0
+  },
+  {
+   "theta": 0.1,
+   "flags": 8,
+   "prec": 0.875,
+   "rec": 1.0
+  }
+ ],
+ "per_tier_flags": [
+  {
+   "theta": 0.01,
+   "tier": 1,
+   "flags": 8,
+   "true": 8,
+   "tp": 8
+  },
+  {
+   "theta": 0.01,
+   "tier": 2,
+   "flags": 27,
+   "true": 24,
+   "tp": 23
+  },
+  {
+   "theta": 0.01,
+   "tier": 3,
+   "flags": 0,
+   "true": 2,
+   "tp": 0
+  },
+  {
+   "theta": 0.05,
+   "tier": 1,
+   "flags": 8,
+   "true": 8,
+   "tp": 8
+  },
+  {
+   "theta": 0.05,
+   "tier": 2,
+   "flags": 0,
+   "true": 0,
+   "tp": 0
+  },
+  {
+   "theta": 0.05,
+   "tier": 3,
+   "flags": 0,
+   "true": 0,
+   "tp": 0
+  }
+ ]
+}

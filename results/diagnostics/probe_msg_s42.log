@@ -1,0 +1,7 @@
+Labels: (493, 116), mean nonzero per event: 3.8, events with >=5 impacted T1: 61
+Split: train 343 / val 73 / test 77
+corr(in-degree, total in-volume) T1: 0.915
+Base | cent=off msg=w_hat: hit@3 0.758 hit@5 0.706 hit@10 0.772 ndcg@5 0.842 rho_imp 0.627 (78 ep, 59s)
++temporal | cent=off msg=w_hat: hit@3 0.760 hit@5 0.708 hit@10 0.777 ndcg@5 0.841 rho_imp 0.631 (78 ep, 60s)
++gate | cent=off msg=w_hat: hit@3 0.722 hit@5 0.682 hit@10 0.749 ndcg@5 0.814 rho_imp 0.574 (78 ep, 55s)
+Full | cent=off msg=w_hat: hit@3 0.724 hit@5 0.691 hit@10 0.747 ndcg@5 0.820 rho_imp 0.577 (78 ep, 60s)

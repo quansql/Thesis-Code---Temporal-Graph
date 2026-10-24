@@ -1,0 +1,72 @@
+{
+ "breadth": {
+  "T1": {
+   "n": 48,
+   "mean_impacted_T1": 1.0,
+   "median_impacted_T1": 1.0,
+   "mean_total_shortfall": 0.32422545552253723,
+   "max_total_shortfall": 0.6861400008201599,
+   "mean_max_single": 0.32422545552253723,
+   "max_single": 0.6861400008201599,
+   "share_events_total_ge_0.05": 1.0,
+   "share_events_total_ge_0.10": 0.9375
+  },
+  "T2": {
+   "n": 147,
+   "mean_impacted_T1": 1.9727891156462585,
+   "median_impacted_T1": 1.0,
+   "mean_total_shortfall": 0.02609422616660595,
+   "max_total_shortfall": 0.31216880679130554,
+   "mean_max_single": 0.012911678291857243,
+   "max_single": 0.08171702176332474,
+   "share_events_total_ge_0.05": 0.1292517006802721,
+   "share_events_total_ge_0.10": 0.06802721088435375
+  },
+  "T3": {
+   "n": 298,
+   "mean_impacted_T1": 5.100671140939597,
+   "median_impacted_T1": 1.0,
+   "mean_total_shortfall": 0.00584427360445261,
+   "max_total_shortfall": 0.17732468247413635,
+   "mean_max_single": 0.0011478238739073277,
+   "max_single": 0.0109980134293437,
+   "share_events_total_ge_0.05": 0.030201342281879196,
+   "share_events_total_ge_0.10": 0.010067114093959731
+  }
+ },
+ "alt_absorption": {
+  "T1": {
+   "impacted_T1_orig": 1.0,
+   "impacted_T1_alt": 1.0,
+   "max_label_orig": 0.6861400008201599,
+   "max_label_alt": 0.6861400008201599,
+   "total_orig": 0.32422545552253723,
+   "total_alt": 0.32422545552253723,
+   "top5_overlap": null,
+   "n_top5": 0,
+   "spearman_impacted": null
+  },
+  "T2": {
+   "impacted_T1_orig": 1.9727891156462585,
+   "impacted_T1_alt": 1.9727891156462585,
+   "max_label_orig": 0.08171702176332474,
+   "max_label_alt": 0.08171702176332474,
+   "total_orig": 0.02609422616660595,
+   "total_alt": 0.02609422616660595,
+   "top5_overlap": 1.0,
+   "n_top5": 10,
+   "spearman_impacted": 1.0
+  },
+  "T3": {
+   "impacted_T1_orig": 5.100671140939597,
+   "impacted_T1_alt": 0.11409395973154363,
+   "max_label_orig": 0.0109980134293437,
+   "max_label_alt": 0.0026985029689967632,
+   "total_orig": 0.00584427360445261,
+   "total_alt": 0.00013255045632831752,
+   "top5_overlap": 0.9,
+   "n_top5": 2,
+   "spearman_impacted": 0.8630477770649074
+  }
+ }
+}

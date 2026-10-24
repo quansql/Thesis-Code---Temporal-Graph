@@ -34,6 +34,16 @@ All data are synthetic. The generator and its parameters are documented in Appen
 | `centrality_probe.py` | Correlation between Tier-1 in-degree and the label | Section 4.3.4 |
 | `common.py` | Shared setup for the scripts above (seeds, extended set, metrics, env switches `TH`, `ETA_HET`, `TIER_MODE`, `KAPPA`) | |
 
+### Diagnostics for the advisor feedback of 23 Oct 2026
+
+| Script | Produces | Thesis |
+|---|---|---|
+| `diag_feedback.py` | Copy of `run_experiments_v2.py` with extra checks: calibration fit selection (214 of 214 validation pairs with E > 0 have y > 0), smearing factor 1.16, flag sensitivity with smearing, per-tier flags at θ = 0.01 and 0.05 | Sections 4.3.3, 5.5.4, 6.1 |
+| `breadth_absorption.py` | Breadth of events by source tier (impacted Tier-1 suppliers, total shortfall); label under exact partial-shortfall absorption max(0, y − b/T) | Sections 4.1.4, 5.5.2, 6.1 |
+| `probe_msg.py [seed]` | Dependency share ŵⱼᵢ instead of raw volume eⱼᵢ as message weight (hit@5 0.706 vs 0.716, seed 42) | Section 5.4 |
+
+Outputs and logs are in `results/diagnostics/`.
+
 Saved outputs and logs from the reported runs are in `results/`.
 
 ## Running
